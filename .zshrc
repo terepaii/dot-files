@@ -1,10 +1,7 @@
 ZSH_DISABLE_COMPFIX=true
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/Stephen-Work/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 source ~/.bash_profile 
-
-# The fuck
-eval $(thefuck --alias)
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
