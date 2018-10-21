@@ -10,6 +10,7 @@ else
     echo "export ZDOTDIR=$ZSH_DIR" >> $ZSH_DIR/.zshenv
     echo "Copying .zshenv to $HOME"
     cp $ZSH_DIR/.zshenv ~
+    #TODO: Remove the export line after copying
 fi
 
 ARCH="$(uname -s)"
@@ -20,7 +21,6 @@ esac
 
 # Installations for OSX
 #TODO: Add a check for zsh highlighting
-
 
 if [[ $MACHINE == "Mac" ]]
 then
