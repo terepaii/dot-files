@@ -2,6 +2,11 @@
 
 ZSH_DIR=$PWD/zsh
 
+function setup_vim () {
+    ln -s $PWD/vim/.vim $HOME/
+    ln -s $PWD/vim/.vimrc $HOME/
+}
+
 if grep -q "export ZDOTDIR=" $ZSH_DIR/.zshenv
 then
     echo "ZDOTDIR already set"
@@ -24,6 +29,8 @@ esac
 
 if [[ $MACHINE == "Mac" ]]
 then
+    setup_vim
+
     which -s ruby
     if [[ $? != 0 ]]
     then
